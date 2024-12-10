@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia's Multimedia Capstone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
+</head>
+<body>
+    <nav id="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#video">Video</a></li>
+        </ul>
+    </nav>
+
+    <div id="fullpage">
+        <!-- Page 1: Home -->
+        <div class="section" id="home">
+            <div class="content-box">
+                <div class="text">
+                    <h1 class="title">Software Multimedia Capstone</h1>
+                    <p>ITE 170</p>
+                    <div class="audio-container">
+                        <audio id="originalSong" controls>
+                            <source src="audio/UnchartedHearts.mp3" type="audio/mpeg"> 
+                            <source src="audio/UnchartedHearts.wav" type="audio/wav"> 
+                            <p>Your browser does not support the audio element.</p>
+                        </audio>                    
+                    </div>                    
+                </div>
+                <div class="graphic">
+                    <img src="images/julia-bubble-color.png" alt="bubble letter spelling Julia">
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2: Gallery -->
+        <div class="section" id="gallery">
+            <div class="content-box">
+                <div class="graphic slideshow">
+                    <img src="images/strawberries.png" alt="Strawberry picking poster">
+                    <img src="images/less-is-more.png" alt="Design principles poster">
+                    <img src="images/nyc-xms.png" alt="Holiday themed NYC mock newspaper">
+                    <img src="images/scribbleCircle.png" alt="Scribble circles">
+                    <img src="images/into-cup.svg" alt="Pink abstract shapes pour into cup">
+                </div>
+            </div>
+        </div>        
+
+        <!-- Page 3: Video -->
+        <div class="section" id="video">
+            <div class="content-box">
+                <div class="graphic video-container">
+                    <video src="videos/name.mp4" autoplay muted loop></video>
+                    <video src="videos/clouds.mp4" autoplay muted loop></video>
+                    <video src="videos/programming-animation.mp4" autoplay muted loop></video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

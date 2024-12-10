@@ -1,0 +1,178 @@
+/* Sitewide Styling */
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* Nav Bar */
+#nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    text-align: center;
+    padding: 10px 0;
+}
+#nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+#nav li a:hover {
+    color: #ee59e4;
+}
+
+/* FullPage Sections */
+.section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+#home {
+    background: #802be8;
+    color: white;
+}
+#gallery {
+    background: #00a2ff;
+    color: black;
+}
+#video {
+    background: #ee59e4;
+    color: white;
+}
+.fp-overflow {
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background: transparent !important; /* Force tranparency */
+}
+
+.title {
+    font-weight: 900;
+    font-size: 2rem;
+}
+.graphic {
+    max-width: 20;
+    height: auto;
+}
+
+/* Content Box Styling */
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    background: transparent !important; /* Force tranparency */
+}
+/* Home Styling */ 
+
+/* Gallery Styling */
+#gallery img {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: auto; 
+    max-width: 100%; 
+    height: auto; 
+    max-height: 100%; 
+    object-fit: contain; 
+    opacity: 0; 
+    animation: fade 25s infinite; /* Animation for cycling images */
+}
+#gallery img:nth-child(2) {
+    animation-delay: 5s;
+}
+#gallery img:nth-child(3) {
+    animation-delay: 10s;
+}
+#gallery img:nth-child(4) {
+    animation-delay: 15s;
+}
+#gallery img:nth-child(5) {
+    animation-delay: 20s;
+}
+#gallery .content-box {
+    position: relative;
+    width: 100%; 
+    max-width: 800px;
+    height: 400px; 
+    margin: auto; 
+    overflow: hidden; 
+    background: #fff; 
+}
+.slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    margin: auto;
+    animation: fade 15s infinite;
+    background: none;
+}
+@keyframes fade {
+    0%, 20% { opacity: 1; z-index: 1; } /* Image is visible */
+    21%, 100% { opacity: 0; z-index: 0; } /* Image is hidden */
+}
+
+/* Delays */
+.slideshow img:nth-child(2) {
+    animation-delay: 5s;
+}
+.slideshow img:nth-child(3) {
+    animation-delay: 10s;
+}
+
+/* Video Container */
+.video-container {
+    display: flex;
+    gap: 10px;
+}
+.video-container video {
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* Larger Screens */
+@media (min-width: 768px) {
+    .content-box {
+        flex-direction: row;
+    }
+    .text {
+        flex: 1;
+        padding: 20px;
+    }
+    .graphic {
+        flex: 1;
+    }
+}
